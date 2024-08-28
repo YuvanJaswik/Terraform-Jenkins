@@ -17,10 +17,10 @@ pipeline {
                     }
                 }
             }
-        }
-    stage ('destroy') {
+        stage('destroy') {
             steps {
                 sh "pwd;cd terraform/ ; terraform destroy"
             }
         }
     }
+}
