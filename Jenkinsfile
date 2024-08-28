@@ -7,20 +7,10 @@ pipeline {
 
    agent  any
     stages {
-        stage('checkout') {
-            steps {
-                 script{
-                        dir("terraform")
-                        {
-                            git "https://github.com/YuvanJaswik/Terraform-Jenkins.git"
-                        }
-                    }
-                }
-            }
         stage('destroy') {
-            steps {
+           steps {
                 sh "pwd;cd terraform/ ; terraform destroy"
             }
         }
-    }
+     }
 }
