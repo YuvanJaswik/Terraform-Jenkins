@@ -13,8 +13,8 @@ provider "aws" {
 
 #Create EC2 Instance
 resource "aws_instance" "jenkins-ec2" {
-  ami                       = "ami-051f7e7f6c2f40dc1"
-  instance_type             = "t2.micro"
+  ami                       = "ami-066784287e358dad1"
+  instance_type             = "t3.medium"
   security_groups = [aws_security_group.myjenkins_sg.name]
   #user_data                 = file("install_jenkins.sh")
  
