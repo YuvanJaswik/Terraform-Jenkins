@@ -19,5 +19,14 @@ resource "aws_instance" "ExampleAppServerInstance" {
 
   tags = {
     Name = "ExampleAppServerInstance"
+}
+}
+resource "aws_s3_bucket" "my-test-bucket" {
+  bucket = "my-tf-test-bucket"
+
+  tags = {
+    Name        = "my-test-bucket"
+    Environment = "Dev"
+ 
   }
 }
